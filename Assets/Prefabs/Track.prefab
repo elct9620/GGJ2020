@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764859993949047628}
   - component: {fileID: 2637170212778635305}
+  - component: {fileID: 5871477026377928388}
   m_Layer: 8
   m_Name: BeatPoint
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2923647380178751943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -4.4, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 5317473886853186581}
   m_RootOrder: 1
@@ -67,20 +68,40 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 637539267
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingLayerID: -1105339135
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -8622283388504675842, guid: 7cf783395e21b4bf4866670ff27378be,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
-  m_Size: {x: 0.75, y: 0.75}
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5871477026377928388
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923647380178751943}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5543d1018da0149b5a150cc13c4af3ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4238050342199370715
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +185,10 @@ MonoBehaviour:
   Source: {fileID: 0}
   Level: {fileID: 0}
   TimeOffset: 0
+  SquarePitchPercentage: 0.33
+  TrianglePitchPercentage: 0.66
+  FilledPercentage: 0.5
+  BottomFire: {fileID: 2637170212778635305}
 --- !u!212 &8733330043527212690
 SpriteRenderer:
   m_ObjectHideFlags: 0
