@@ -6,6 +6,11 @@ public class NoteMove : MonoBehaviour
 {
     public int player;
     public float speed;
+
+    public Sprite CircleSprite;
+    public Sprite SquareSprite;
+    public Sprite TriangleSprite;
+    public Slot.Types Type;
     Rigidbody2D rb2D;
     public NoteMove(int playerNumber, float noteSpeed){
         player = playerNumber;
@@ -15,6 +20,23 @@ public class NoteMove : MonoBehaviour
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    public void SetType(Slot.Types type)
+    {
+        Type = type;
+        switch (type)
+        {
+            case Slot.Types.Circle:
+                gameObject.GetComponent<SpriteRenderer>().sprite = CircleSprite;
+                break;
+            case Slot.Types.Square:
+                gameObject.GetComponent<SpriteRenderer>().sprite =  SquareSprite;
+                break;
+            case Slot.Types.Triangle:
+                gameObject.GetComponent<SpriteRenderer>().sprite =  TriangleSprite;
+                break;
+        }
     }
 
     // Update is called once per frame
