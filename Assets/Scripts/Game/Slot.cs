@@ -32,10 +32,26 @@ public class Slot : MonoBehaviour
         yOffset = Camera.main.orthographicSize * -1;
         TrackEnd = yOffset + BeatOffset / 2;
 
-        int PitchOffset = Note.Pitch - 65;
-        int AbsPitchOffset = Mathf.Abs(PitchOffset);
-        int PitchDirection = PitchOffset / AbsPitchOffset;
-        Source.pitch = Mathf.Pow(1.05946f, AbsPitchOffset) * PitchDirection;
+        /*
+                int PitchOffset = Note.Pitch - 60;
+                int AbsPitchOffset = Mathf.Abs(PitchOffset);
+                int PitchDirection = 1;
+                if (PitchOffset != 0)
+                {
+                    PitchDirection = PitchOffset / AbsPitchOffset;
+                }
+                else
+                {
+                    PitchDirection = 1;
+                }
+        */
+
+        // https://stackoverflow.com/questions/36793628/frequency-and-pitch-relation-for-audioclip-unity3d
+        float transpose = -4;
+        float note = Note.Pitch - 60;
+        Source.pitch = Mathf.Pow(2, (note + transpose) / 12.0f);
+
+        // Source.pitch = Mathf.Pow(1.05946f, AbsPitchOffset) * PitchDirection;
 
         UpdateOpacity();
     }
@@ -82,7 +98,8 @@ public class Slot : MonoBehaviour
 
         if (TrackEnd >= yPosition)
         {
-            Destroy(gameObject);
+            Sprite.enabled = false;
+            Destroy(gameObject, 10.0f);
         }
     }
 
@@ -109,7 +126,8 @@ public class Slot : MonoBehaviour
 
         if (other.tag == "SlotShoot")
         {
-            if (other.GetComponent<NoteMove>().Type == Type) {
+            if (other.GetComponent<NoteMove>().Type == Type)
+            {
                 Filled = true;
                 UpdateOpacity();
 
