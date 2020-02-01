@@ -102,9 +102,13 @@ public class Slot : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        // TODO: Check "other" is valid object
-        Filled = true;
-        UpdateOpacity();
+        if (other.tag == "SlotShoot")
+        {
+            Filled = true;
+            UpdateOpacity();
+
+            Destroy(other.gameObject);
+        }
     }
 
     public void UpdateOpacity()
