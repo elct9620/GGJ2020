@@ -25,6 +25,9 @@ public class Slot : MonoBehaviour
     private bool PlayEnd = false;
     public Types Type;
 
+    public delegate void OnExitEvent(bool IsFilled);
+    public event OnExitEvent OnExit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -102,6 +105,11 @@ public class Slot : MonoBehaviour
         {
             Sprite.enabled = false;
             Destroy(gameObject, 10.0f);
+
+            if (OnExit != null)
+            {
+                OnExit.Invoke(Filled);
+            }
         }
     }
 
