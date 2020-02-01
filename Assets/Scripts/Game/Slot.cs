@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-    public enum Types {Circle, Square, Triangle};
+    public enum Types { Circle, Square, Triangle };
     public LevelData Level;
     public AudioSource MainSource;
     public AudioSource Source;
@@ -21,7 +21,7 @@ public class Slot : MonoBehaviour
     public bool Filled = false;
 
     private bool PlayEnd = false;
-    private Types _type;
+    public Types Type;
 
     // Start is called before the first frame update
     void Start()
@@ -42,23 +42,24 @@ public class Slot : MonoBehaviour
 
     public void SetType(Types type)
     {
-        _type = type;
-        switch (type) {
+        Type = type;
+        switch (type)
+        {
             case Types.Circle:
-            Sprite.sprite = CircleSprite;
-            break;
+                Sprite.sprite = CircleSprite;
+                break;
             case Types.Square:
-            Sprite.sprite = SquareSprite;
-            break;
+                Sprite.sprite = SquareSprite;
+                break;
             case Types.Triangle:
-            Sprite.sprite = TriangleSprite;
-            break;
+                Sprite.sprite = TriangleSprite;
+                break;
         }
     }
 
-    public bool isType(Types type)
+    public bool IsType(Types type)
     {
-        return _type == type;
+        return Type == type;
     }
 
     bool CanPlay()
@@ -101,9 +102,13 @@ public class Slot : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        // TODO: Check "other" is valid object
-        Filled = true;
-        UpdateOpacity();
+        if (other.tag == "SlotShoot")
+        {
+            Filled = true;
+            UpdateOpacity();
+
+            Destroy(other.gameObject);
+        }
     }
 
     public void UpdateOpacity()
