@@ -8,10 +8,14 @@ public class Track : MonoBehaviour
     public Slot SlotPrefab;
     public ScoreData Score;
     public AudioSource Source;
+    public LevelData Level;
 
     // Start is called before the first frame update
     void Start()
     {
+        Source = MusicPlayer.main.Source;
+        Level = MusicPlayer.main.CurrentLevel;
+
         StartCoroutine(CreateNote());
     }
 
