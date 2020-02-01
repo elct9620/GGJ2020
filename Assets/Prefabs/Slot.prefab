@@ -60,7 +60,7 @@ MonoBehaviour:
   BeatOffset: 1
   yOffset: 0
   TrackEnd: 0
-  Filled: 1
+  Filled: 0
   Type: 0
 --- !u!212 &-4787412706791907616
 SpriteRenderer:
