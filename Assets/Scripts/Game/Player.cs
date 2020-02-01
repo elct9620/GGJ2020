@@ -6,9 +6,9 @@ public class Player : MonoBehaviour
 {
     public float movingTime = 0.1f;
     //public LayerMask blockingLayer;            //Layer on which collision will be checked.
-    public int step = 10;
+    public float step = 0.01f;
     
-    public GameObject movingArea;
+    // public GameObject movingArea;
     private BoxCollider2D boxCollider;         //The BoxCollider2D component attached to this object.
     private Rigidbody2D rb2D;                //The Rigidbody2D component attached to this object.
     private float inverseMoveTime;            //Used to make movement more efficient.
@@ -46,11 +46,11 @@ public class Player : MonoBehaviour
     void tryMove(int vertical)
     {
         Vector2 nowPosition = transform.position;
-        endPosition = nowPosition + new Vector2 (0, 10 * vertical);
-        RectTransform rt = movingArea.GetComponent<RectTransform>();
-        float gap = 20;
-        float topMost =  rt.rect.height * 0.5f  - gap;
-        float bottomMost = -1 * rt.rect.height * 0.5f  + gap;
+        endPosition = nowPosition + new Vector2 (0, vertical * step);
+        //RectTransform rt = movingArea.GetComponent<RectTransform>();
+        float gap = 1;
+        float topMost =  5  - gap * 2;
+        float bottomMost = -5  + gap;
         if (endPosition.y > bottomMost && endPosition.y < topMost)
         {
             StopAllCoroutines();
@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         while(sqrRemainingDistance > float.Epsilon)
         {   
             //Find a new position proportionally closer to the end, based on the moveTime
-            Vector3 newPostion = Vector3.MoveTowards(rb2D.position, end, step * inverseMoveTime * Time.deltaTime);
+            Vector3 newPostion = Vector3.MoveTowards(rb2D.position, end, inverseMoveTime * Time.deltaTime);
             Debug.LogError("in newPostion!" + newPostion);
             //Call MovePosition on attached Rigidbody2D and move it to the calculated position.
             rb2D.MovePosition (newPostion);
