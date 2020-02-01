@@ -6,4 +6,5 @@ using UnityEngine;
 public class ScoreData : ScriptableObject
 {
     public List<NoteData> Notes;
+    public AudioClip Clip;
 }
