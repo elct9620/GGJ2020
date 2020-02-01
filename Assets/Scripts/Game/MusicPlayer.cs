@@ -22,21 +22,22 @@ public class MusicPlayer : MonoBehaviour
     public AudioSource Source;
     public AudioClip Clip;
     public LevelData CurrentLevel;
+    public float WaitSecounds = 1.0f;
     void Start()
     {
         CreateTracks();
-        PlayMusic();
+        StartCoroutine(PlayMusic());
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
-    private void PlayMusic()
+    public IEnumerator PlayMusic()
     {
         Source.clip = Clip;
+        yield return new WaitForSeconds(WaitSecounds);
         Source.Play();
     }
 

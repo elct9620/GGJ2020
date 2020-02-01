@@ -6,5 +6,5 @@ using UnityEngine;
 public class LevelData : ScriptableObject
 {
     public List<ScoreData> Scores;
-    public float Speed = 1.0f;
+    public float Speed = 2.0f;
 }
