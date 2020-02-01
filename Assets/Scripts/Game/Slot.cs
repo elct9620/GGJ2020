@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Slot : MonoBehaviour
 {
     public enum Types { Circle, Square, Triangle };
@@ -12,6 +12,8 @@ public class Slot : MonoBehaviour
     public Sprite SquareSprite;
     public Sprite TriangleSprite;
     public SpriteRenderer Sprite;
+
+    public GameObject ScoreText;
 
     public NoteData Note;
     // Collider Height
@@ -130,7 +132,7 @@ public class Slot : MonoBehaviour
             {
                 Filled = true;
                 UpdateOpacity();
-
+                Gameplay.UpdateScore();
                 Destroy(other.gameObject);
             }
         }
@@ -147,4 +149,5 @@ public class Slot : MonoBehaviour
             Sprite.color = new Color(Sprite.color.r, Sprite.color.g, Sprite.color.b, 0.5f);
         }
     }
+    
 }
