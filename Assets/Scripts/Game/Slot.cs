@@ -102,6 +102,11 @@ public class Slot : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (Filled)
+        {
+            return;
+        }
+
         if (other.tag == "SlotShoot")
         {
             Filled = true;
