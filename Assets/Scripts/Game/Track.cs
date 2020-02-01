@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class Track : MonoBehaviour
 {
-    public List<Slot> Slots;
+    public GameObject Slots;
+    public Slot SlotPrefab;
     public Score Score;
+    public AudioSource Source;
+
     // Start is called before the first frame update
     void Start()
     {
-        Slots = new List<Slot>();
+        StartCoroutine(CreateNote());
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
 
+    public IEnumerator CreateNote()
+    {
+        foreach (Note note in Score.Notes)
+        {
+            while (note.Time >= Source.time)
+            {
+                yield return null;
+            }
+
+            Slot slot = Instantiate(SlotPrefab, Slots.transform);
+        }
     }
 }
