@@ -109,10 +109,12 @@ public class Slot : MonoBehaviour
 
         if (other.tag == "SlotShoot")
         {
-            Filled = true;
-            UpdateOpacity();
+            if (other.GetComponent<NoteMove>().Type == Type) {
+                Filled = true;
+                UpdateOpacity();
 
-            Destroy(other.gameObject);
+                Destroy(other.gameObject);
+            }
         }
     }
 

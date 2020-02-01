@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public float noteSpeed = 1.0f;
     public Animator Animator;
 
+    public GameObject NoteSelector;
+
     // public GameObject movingArea;
     private BoxCollider2D boxCollider;         //The BoxCollider2D component attached to this object.
     private Rigidbody2D rb2D;                //The Rigidbody2D component attached to this object.
@@ -66,23 +68,29 @@ public class Player : MonoBehaviour
             case ("Player1"):
                 if (Input.GetKeyDown(KeyCode.D))
                 {
-                    SpawnNote(1, noteSpeed);
-                    if (OnThrow != null)
-                        OnThrow.Invoke();
+                    Slot.Types? type = NoteSelector.GetComponent<NoteSelector>().useSelectedType();
+                    if (type != null) {
+                        SpawnNote(1, noteSpeed, (Slot.Types) type);
+                        if (OnThrow != null)
+                            OnThrow.Invoke();
+                    }
                 }
                 break;
             case ("Player2"):
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    SpawnNote(2, noteSpeed);
-                    if (OnThrow != null)
-                        OnThrow.Invoke();
+                    Slot.Types? type = NoteSelector.GetComponent<NoteSelector>().useSelectedType();
+                    if (type != null) {
+                        SpawnNote(2, noteSpeed, (Slot.Types) type);
+                        if (OnThrow != null)
+                            OnThrow.Invoke();
+                    }
                 }
                 break;
         }
     }
 
-    public GameObject SpawnNote(int playerid, float speed)
+    public GameObject SpawnNote(int playerid, float speed, Slot.Types type)
     {
         Vector3 distanceNotePlayer = new Vector3(0, 0, 0);
         if (playerid == 1)
@@ -92,6 +100,7 @@ public class Player : MonoBehaviour
 
         note.GetComponent<NoteMove>().player = playerid;
         note.GetComponent<NoteMove>().speed = speed;
+        note.GetComponent<NoteMove>().SetType(type);
         GameObject noteShoot = Instantiate(note, transform.position + distanceNotePlayer, transform.rotation) as GameObject;
 
         return noteShoot;
