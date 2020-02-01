@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class Note
+public class NoteData
 {
     public float Time;
     public int Pitch;
