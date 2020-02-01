@@ -10,6 +10,9 @@ public class Track : MonoBehaviour
     public AudioSource Source;
     public LevelData Level;
     public float TimeOffset = 0.0f;
+    public float SquarePitchPercentage = 0.33f;
+    public float TrianglePitchPercentage = 0.66f;
+    public float FilledPercentage = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +32,15 @@ public class Track : MonoBehaviour
 
     public IEnumerator CreateNote()
     {
-        System.Array values = System.Enum.GetValues(typeof(Slot.Types));
-        Random random = new Random();
+        int maxPitch = 0, minPitch = 100000;
+        foreach (NoteData note in Score.Notes)
+        {
+            if (maxPitch < note.Pitch) { maxPitch = note.Pitch; }
+            if (minPitch > note.Pitch) { minPitch = note.Pitch; }
+        }
+        int squarePitch = (int) Mathf.Lerp((float) minPitch, (float) maxPitch, SquarePitchPercentage);
+        int trianglePitch = (int) Mathf.Lerp((float) minPitch, (float) maxPitch, TrianglePitchPercentage);
+
         foreach (NoteData note in Score.Notes)
         {
             while (note.Time >= Source.time + TimeOffset)
@@ -40,8 +50,19 @@ public class Track : MonoBehaviour
 
             Slot slot = Instantiate(SlotPrefab, Slots.transform);
             slot.Note = note;
-            slot.SetType((Slot.Types)values.GetValue(Mathf.FloorToInt(Random.value * values.Length)));
+            if (note.Pitch > trianglePitch) {
+                slot.SetType(Slot.Types.Triangle);
+            } else if (note.Pitch > squarePitch) {
+                slot.SetType(Slot.Types.Square);
+            } else {
+                slot.SetType(Slot.Types.Circle);
+            }
             slot.Source.clip = Score.Clip;
+
+            if (Random.value < FilledPercentage) {
+                slot.Filled = true;
+            }
+
         }
     }
 }
