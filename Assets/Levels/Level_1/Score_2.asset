@@ -13,240 +13,112 @@ MonoBehaviour:
   m_Name: Score_2
   m_EditorClassIdentifier: 
   Notes:
-  - Time: 0.22222222
-    Pitch: 79
-  - Time: 0.6666667
-    Pitch: 76
-  - Time: 1
-    Pitch: 76
-  - Time: 1.3333334
-    Pitch: 76
-  - Time: 1.7777778
-    Pitch: 74
-  - Time: 2
-    Pitch: 77
-  - Time: 2.4444444
-    Pitch: 72
-  - Time: 2.8888888
-    Pitch: 76
-  - Time: 3.148148
-    Pitch: 76
-  - Time: 3.7777777
-    Pitch: 79
-  - Time: 4.2222223
-    Pitch: 76
-  - Time: 4.5555553
-    Pitch: 76
-  - Time: 4.888889
-    Pitch: 76
-  - Time: 5.3333335
-    Pitch: 74
-  - Time: 5.5555553
-    Pitch: 77
-  - Time: 6
-    Pitch: 72
-  - Time: 6.4444447
-    Pitch: 74
-  - Time: 6.703704
-    Pitch: 74
-  - Time: 7.3333335
-    Pitch: 79
-  - Time: 7.7777777
-    Pitch: 76
-  - Time: 8.111111
-    Pitch: 76
-  - Time: 8.444445
-    Pitch: 76
-  - Time: 8.888889
-    Pitch: 74
-  - Time: 9.111111
-    Pitch: 77
-  - Time: 9.555555
-    Pitch: 72
-  - Time: 10
-    Pitch: 76
-  - Time: 10.259259
-    Pitch: 76
-  - Time: 10.888889
-    Pitch: 79
-  - Time: 11.333333
-    Pitch: 76
-  - Time: 11.666667
-    Pitch: 76
-  - Time: 12
-    Pitch: 76
-  - Time: 12.444445
-    Pitch: 74
-  - Time: 12.666667
-    Pitch: 77
-  - Time: 13.111111
-    Pitch: 72
-  - Time: 13.555555
-    Pitch: 74
-  - Time: 14.444445
-    Pitch: 71
-  - Time: 15.111111
-    Pitch: 74
-  - Time: 15.777778
-    Pitch: 69
-  - Time: 16.444445
-    Pitch: 74
-  - Time: 17.11111
-    Pitch: 78
-  - Time: 17.777779
-    Pitch: 69
-  - Time: 18.444445
-    Pitch: 73
-  - Time: 19.11111
-    Pitch: 78
-  - Time: 19.777779
-    Pitch: 71
-  - Time: 20.444445
-    Pitch: 74
-  - Time: 21.11111
-    Pitch: 78
-  - Time: 21.555555
-    Pitch: 71
-  - Time: 22.222221
-    Pitch: 74
-  - Time: 22.88889
-    Pitch: 69
-  - Time: 23.555555
-    Pitch: 74
-  - Time: 24.222221
-    Pitch: 78
-  - Time: 24.88889
-    Pitch: 69
-  - Time: 25.555555
-    Pitch: 73
-  - Time: 26.222221
-    Pitch: 78
-  - Time: 26.88889
-    Pitch: 71
-  - Time: 27.555555
-    Pitch: 74
-  - Time: 28.222221
-    Pitch: 72
-  - Time: 28.444445
-    Pitch: 84
-  - Time: 28.88889
-    Pitch: 77
-  - Time: 29.333334
-    Pitch: 74
-  - Time: 29.555555
-    Pitch: 77
-  - Time: 30
-    Pitch: 72
-  - Time: 30.333334
-    Pitch: 76
-  - Time: 30.666666
-    Pitch: 76
-  - Time: 31.11111
-    Pitch: 74
-  - Time: 31.555555
-    Pitch: 74
-  - Time: 31.62963
-    Pitch: 74
-  - Time: 32
-    Pitch: 84
-  - Time: 32.444443
-    Pitch: 77
-  - Time: 32.88889
-    Pitch: 74
-  - Time: 33.11111
-    Pitch: 77
-  - Time: 33.555557
-    Pitch: 72
-  - Time: 33.88889
-    Pitch: 76
-  - Time: 34.22222
-    Pitch: 76
-  - Time: 34.666668
-    Pitch: 74
-  - Time: 35.11111
-    Pitch: 72
-  - Time: 35.185184
-    Pitch: 72
-  - Time: 35.555557
-    Pitch: 84
-  - Time: 36
-    Pitch: 77
-  - Time: 36.444443
-    Pitch: 74
-  - Time: 36.666668
-    Pitch: 77
-  - Time: 37.11111
-    Pitch: 72
-  - Time: 37.444443
-    Pitch: 76
-  - Time: 37.77778
-    Pitch: 76
-  - Time: 38.22222
-    Pitch: 74
-  - Time: 38.666668
-    Pitch: 74
-  - Time: 38.74074
-    Pitch: 74
-  - Time: 39.11111
-    Pitch: 84
-  - Time: 39.555557
-    Pitch: 77
-  - Time: 40
-    Pitch: 74
-  - Time: 40.22222
-    Pitch: 77
-  - Time: 40.666668
-    Pitch: 72
-  - Time: 41
-    Pitch: 76
-  - Time: 41.333332
-    Pitch: 76
-  - Time: 41.77778
-    Pitch: 74
-  - Time: 42.22222
-    Pitch: 72
-  - Time: 42.666668
-    Pitch: 69
-  - Time: 43.11111
-    Pitch: 73
-  - Time: 44
-    Pitch: 78
-  - Time: 44.666668
-    Pitch: 73
-  - Time: 45.11111
-    Pitch: 76
-  - Time: 46
-    Pitch: 67
-  - Time: 46.666668
-    Pitch: 71
-  - Time: 47.11111
-    Pitch: 74
-  - Time: 48
-    Pitch: 69
-  - Time: 48.666668
-    Pitch: 73
-  - Time: 49.11111
-    Pitch: 76
-  - Time: 49.77778
-    Pitch: 69
-  - Time: 50.22222
-    Pitch: 73
-  - Time: 51.11111
-    Pitch: 78
-  - Time: 51.77778
-    Pitch: 73
-  - Time: 52.22222
-    Pitch: 76
-  - Time: 53.11111
-    Pitch: 67
-  - Time: 53.77778
-    Pitch: 71
-  - Time: 54.22222
-    Pitch: 74
-  - Time: 55.11111
-    Pitch: 69
-  - Time: 55.77778
-    Pitch: 73
-  - Time: 56.22222
-    Pitch: 76
+  - Time: 9.905417024935511
+    Pitch: 58
+  - Time: 11.143594153052451
+    Pitch: 56
+  - Time: 12.381771281169389
+    Pitch: 53
+  - Time: 13.619948409286328
+    Pitch: 55
+  - Time: 14.858125537403268
+    Pitch: 51
+  - Time: 16.096302665520206
+    Pitch: 55
+  - Time: 17.334479793637147
+    Pitch: 53
+  - Time: 18.572656921754085
+    Pitch: 51
+  - Time: 19.810834049871023
+    Pitch: 58
+  - Time: 21.04901117798796
+    Pitch: 56
+  - Time: 22.287188306104902
+    Pitch: 53
+  - Time: 23.52536543422184
+    Pitch: 55
+  - Time: 24.763542562338777
+    Pitch: 51
+  - Time: 26.00171969045572
+    Pitch: 55
+  - Time: 27.239896818572657
+    Pitch: 53
+  - Time: 28.478073946689594
+    Pitch: 55
+  - Time: 29.716251074806536
+    Pitch: 58
+  - Time: 30.954428202923474
+    Pitch: 56
+  - Time: 32.19260533104041
+    Pitch: 53
+  - Time: 33.43078245915735
+    Pitch: 55
+  - Time: 34.668959587274294
+    Pitch: 51
+  - Time: 35.90713671539123
+    Pitch: 55
+  - Time: 37.14531384350817
+    Pitch: 53
+  - Time: 38.38349097162511
+    Pitch: 51
+  - Time: 39.621668099742045
+    Pitch: 58
+  - Time: 40.85984522785898
+    Pitch: 56
+  - Time: 42.09802235597592
+    Pitch: 53
+  - Time: 43.336199484092866
+    Pitch: 55
+  - Time: 44.574376612209804
+    Pitch: 51
+  - Time: 45.81255374032674
+    Pitch: 55
+  - Time: 47.05073086844368
+    Pitch: 53
+  - Time: 48.28890799656062
+    Pitch: 51
+  - Time: 49.527085124677555
+    Pitch: 87
+  - Time: 49.93981083404987
+    Pitch: 86
+  - Time: 50.35253654342218
+    Pitch: 87
+  - Time: 50.7652622527945
+    Pitch: 91
+  - Time: 51.17798796216681
+    Pitch: 89
+  - Time: 51.59071367153912
+    Pitch: 87
+  - Time: 52.00343938091144
+    Pitch: 87
+  - Time: 52.41616509028375
+    Pitch: 86
+  - Time: 52.828890799656065
+    Pitch: 87
+  - Time: 53.241616509028376
+    Pitch: 94
+  - Time: 53.654342218400686
+    Pitch: 92
+  - Time: 54.067067927773
+    Pitch: 91
+  - Time: 54.47979363714531
+    Pitch: 87
+  - Time: 54.89251934651762
+    Pitch: 86
+  - Time: 55.30524505588994
+    Pitch: 87
+  - Time: 55.71797076526225
+    Pitch: 91
+  - Time: 56.13069647463457
+    Pitch: 89
+  - Time: 56.54342218400688
+    Pitch: 87
+  - Time: 56.95614789337919
+    Pitch: 87
+  - Time: 57.368873602751506
+    Pitch: 86
+  - Time: 57.78159931212382
+    Pitch: 87
+  - Time: 58.194325021496134
+    Pitch: 87
   Clip: {fileID: 8300000, guid: 3d690c0e19a2645d3a4e9aa81f05555a, type: 3}
