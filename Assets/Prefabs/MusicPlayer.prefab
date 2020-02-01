@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 163456979199005034}
   - component: {fileID: 7316555916073388091}
   - component: {fileID: 7173954243087753221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MusicPlayer
   m_TagString: MainMusicPlayer
   m_Icon: {fileID: 0}
