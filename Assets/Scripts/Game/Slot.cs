@@ -12,6 +12,8 @@ public class Slot : MonoBehaviour
     // Collider Height
     public float BeatOffset = 1.0f;
     public float yOffset = 0.0f;
+    public float TrackEnd = 0.0f;
+    public bool Filled = false;
 
     private bool PlayEnd = false;
 
@@ -22,7 +24,22 @@ public class Slot : MonoBehaviour
         MainSource = MusicPlayer.main.Source;
 
         yOffset = Camera.main.orthographicSize * -1;
-        Source.pitch = Note.Pitch / 100.0f;
+        TrackEnd = yOffset - BeatOffset;
+
+        int PitchOffset = Note.Pitch - 65;
+        int AbsPitchOffset = Mathf.Abs(PitchOffset);
+        int PitchDirection = PitchOffset / AbsPitchOffset;
+        Source.pitch = Mathf.Pow(1.05946f, AbsPitchOffset) * PitchDirection;
+    }
+
+    bool CanPlay()
+    {
+        if (Note.Time > MainSource.time || PlayEnd || !Filled)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     // Update is called once per frame
@@ -33,9 +50,16 @@ public class Slot : MonoBehaviour
         Vector3 currentPosition = gameObject.transform.position;
         gameObject.transform.position = new Vector3(currentPosition.x, yPosition, currentPosition.z);
 
-        if (MainSource.time >= Note.Time && !PlayEnd)
+        if (TrackEnd >= yPosition)
         {
+            Destroy(gameObject);
+        }
+    }
 
+    void FixedUpdate()
+    {
+        if (CanPlay())
+        {
             Source.Play();
             PlayEnd = true;
         }

@@ -39,6 +39,8 @@ public class Track : MonoBehaviour
             Slot slot = Instantiate(SlotPrefab, Slots.transform);
             slot.Note = note;
             slot.Source.clip = Score.Clip;
+            // TODO: Detect to change on collision
+            slot.Filled = true;
         }
     }
 }
