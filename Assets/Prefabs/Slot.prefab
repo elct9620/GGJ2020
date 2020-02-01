@@ -53,13 +53,14 @@ MonoBehaviour:
   SquareSprite: {fileID: 21300000, guid: 841d340c05b6af84aa4f1f7c6dc7291a, type: 3}
   TriangleSprite: {fileID: 21300000, guid: f631c8befa0b15c4c819c26f654cdef9, type: 3}
   Sprite: {fileID: -4787412706791907616}
+  ScoreText: {fileID: 0}
   Note:
     Time: 0
     Pitch: 0
   BeatOffset: 1
   yOffset: 0
   TrackEnd: 0
-  Filled: 0
+  Filled: 1
   Type: 0
 --- !u!212 &-4787412706791907616
 SpriteRenderer:
