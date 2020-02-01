@@ -50,7 +50,7 @@ public class Slot : MonoBehaviour
 
         // https://stackoverflow.com/questions/36793628/frequency-and-pitch-relation-for-audioclip-unity3d
         float transpose = -4;
-        float note = Note.Pitch - 60;
+        float note = Note.Pitch - 56f; // Magic number for our midi
         Source.pitch = Mathf.Pow(2, (note + transpose) / 12.0f);
 
         // Source.pitch = Mathf.Pow(1.05946f, AbsPitchOffset) * PitchDirection;
@@ -149,5 +149,5 @@ public class Slot : MonoBehaviour
             Sprite.color = new Color(Sprite.color.r, Sprite.color.g, Sprite.color.b, 0.5f);
         }
     }
-    
+
 }
