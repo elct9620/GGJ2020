@@ -20,7 +20,9 @@ public class Gameplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float playbackTime = MusicPlayer.main.Source.time;
+        float totalPlaybackTime = MusicPlayer.main.Clip.length;
+        float playbackTime = totalPlaybackTime - MusicPlayer.main.Source.time;
+
         string minutes = Convert.ToString(Convert.ToInt32(Mathf.Floor(playbackTime / 60.0f)));
         string seconds = Convert.ToString(Convert.ToInt32(Mathf.Floor(playbackTime % 60)));
 
