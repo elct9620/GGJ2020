@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764859993949047628}
   - component: {fileID: 2637170212778635305}
-  - component: {fileID: 5871477026377928388}
+  - component: {fileID: 2880434904205138660}
   m_Layer: 8
   m_Name: BeatPoint
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2923647380178751943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -4.4, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5317473886853186581}
   m_RootOrder: 1
@@ -70,20 +70,20 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1105339135
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8622283388504675842, guid: 7cf783395e21b4bf4866670ff27378be,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.75, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5871477026377928388
+--- !u!95 &2880434904205138660
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -189,6 +189,8 @@ MonoBehaviour:
   TrianglePitchPercentage: 0.66
   FilledPercentage: 0.5
   BottomFire: {fileID: 2637170212778635305}
+  PreferCombo: 10
+  Combo: 0
 --- !u!212 &8733330043527212690
 SpriteRenderer:
   m_ObjectHideFlags: 0
