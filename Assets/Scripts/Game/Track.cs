@@ -6,7 +6,7 @@ public class Track : MonoBehaviour
 {
     public GameObject Slots;
     public Slot SlotPrefab;
-    public Score Score;
+    public ScoreData Score;
     public AudioSource Source;
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class Track : MonoBehaviour
 
     public IEnumerator CreateNote()
     {
-        foreach (Note note in Score.Notes)
+        foreach (NoteData note in Score.Notes)
         {
             while (note.Time >= Source.time)
             {
