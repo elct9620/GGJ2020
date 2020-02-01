@@ -29,6 +29,8 @@ public class Track : MonoBehaviour
 
     public IEnumerator CreateNote()
     {
+        System.Array values = System.Enum.GetValues(typeof(Slot.Types));
+        Random random = new Random();
         foreach (NoteData note in Score.Notes)
         {
             while (note.Time >= Source.time + TimeOffset)
@@ -38,6 +40,7 @@ public class Track : MonoBehaviour
 
             Slot slot = Instantiate(SlotPrefab, Slots.transform);
             slot.Note = note;
+            slot.SetType((Slot.Types) values.GetValue(Mathf.FloorToInt(Random.value * values.Length)));
             slot.Source.clip = Score.Clip;
         }
     }
