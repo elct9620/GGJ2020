@@ -146,4 +146,3 @@ MonoBehaviour:
   Clip: {fileID: 8300000, guid: c3babb3c08dd04cc1a7077f062a95dbc, type: 3}
   CurrentLevel: {fileID: 11400000, guid: 958f9b1220e134450ad540e7d17d629b, type: 2}
   WaitSecounds: 1
-  PlaybackTime: 0
