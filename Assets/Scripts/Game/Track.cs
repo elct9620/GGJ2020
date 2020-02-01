@@ -40,7 +40,7 @@ public class Track : MonoBehaviour
 
             Slot slot = Instantiate(SlotPrefab, Slots.transform);
             slot.Note = note;
-            slot.SetType((Slot.Types) values.GetValue(Mathf.FloorToInt(Random.value * values.Length)));
+            slot.SetType((Slot.Types)values.GetValue(Mathf.FloorToInt(Random.value * values.Length)));
             slot.Source.clip = Score.Clip;
         }
     }
