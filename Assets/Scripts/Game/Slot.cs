@@ -25,7 +25,7 @@ public class Slot : MonoBehaviour
         MainSource = MusicPlayer.main.Source;
 
         yOffset = Camera.main.orthographicSize * -1;
-        TrackEnd = yOffset - BeatOffset;
+        TrackEnd = yOffset + BeatOffset / 2;
 
         int PitchOffset = Note.Pitch - 65;
         int AbsPitchOffset = Mathf.Abs(PitchOffset);
