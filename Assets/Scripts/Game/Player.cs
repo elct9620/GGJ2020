@@ -69,8 +69,9 @@ public class Player : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.D))
                 {
                     Slot.Types? type = NoteSelector.GetComponent<NoteSelector>().useSelectedType();
-                    if (type != null) {
-                        SpawnNote(1, noteSpeed, (Slot.Types) type);
+                    if (type != null)
+                    {
+                        SpawnNote(1, noteSpeed, (Slot.Types)type);
                         if (OnThrow != null)
                             OnThrow.Invoke();
                     }
@@ -80,8 +81,9 @@ public class Player : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     Slot.Types? type = NoteSelector.GetComponent<NoteSelector>().useSelectedType();
-                    if (type != null) {
-                        SpawnNote(2, noteSpeed, (Slot.Types) type);
+                    if (type != null)
+                    {
+                        SpawnNote(2, noteSpeed, (Slot.Types)type);
                         if (OnThrow != null)
                             OnThrow.Invoke();
                     }
