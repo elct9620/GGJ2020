@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scores:
   - {fileID: 11400000, guid: 85dc86b1ee3a84757818e0b7ae85faa6, type: 2}
+  - {fileID: 11400000, guid: c1b590b8496ee4d39bb90b8e487f8469, type: 2}
   Speed: 2
