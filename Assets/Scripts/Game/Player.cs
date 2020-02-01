@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public GameObject note;
     public float noteSpeed = 1.0f;
     public Animator Animator;
+    public List<AudioClip> ShootingSounds;
+    public AudioSource Source;
 
     public GameObject NoteSelector;
 
@@ -32,6 +34,8 @@ public class Player : MonoBehaviour
         OnThrow += () =>
         {
             Animator.SetTrigger("Throw");
+            Source.clip = ShootingSounds[Mathf.FloorToInt(ShootingSounds.Count * Random.value)];
+            Source.Play();
         };
     }
 

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -1105339135
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f631c8befa0b15c4c819c26f654cdef9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa3ca5f3b37e5d948a99d1a9f4c94bf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,12 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af525aa0b5c9c345b7504e88f12bb8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 1
+  player: 2
   speed: 10
   CircleSprite: {fileID: 21300000, guid: aa3ca5f3b37e5d948a99d1a9f4c94bf4, type: 3}
   SquareSprite: {fileID: 21300000, guid: 841d340c05b6af84aa4f1f7c6dc7291a, type: 3}
   TriangleSprite: {fileID: 21300000, guid: f631c8befa0b15c4c819c26f654cdef9, type: 3}
-  Type: 2
+  Type: 0
 --- !u!50 &-1121092219023787124
 Rigidbody2D:
   serializedVersion: 4
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.91, y: 2.61}
+    oldSize: {x: 2.39, y: 2.3}
     newSize: {x: 2.39, y: 2.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
