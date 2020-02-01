@@ -7,6 +7,7 @@ public class Slot : MonoBehaviour
     public LevelData Level;
     public AudioSource MainSource;
     public AudioSource Source;
+    public SpriteRenderer Sprite;
 
     public NoteData Note;
     // Collider Height
@@ -30,6 +31,8 @@ public class Slot : MonoBehaviour
         int AbsPitchOffset = Mathf.Abs(PitchOffset);
         int PitchDirection = PitchOffset / AbsPitchOffset;
         Source.pitch = Mathf.Pow(1.05946f, AbsPitchOffset) * PitchDirection;
+
+        UpdateOpacity();
     }
 
     bool CanPlay()
@@ -62,6 +65,30 @@ public class Slot : MonoBehaviour
         {
             Source.Play();
             PlayEnd = true;
+        }
+    }
+
+    /// <summary>
+    /// Sent when another object enters a trigger collider attached to this
+    /// object (2D physics only).
+    /// </summary>
+    /// <param name="other">The other Collider2D involved in this collision.</param>
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // TODO: Check "other" is valid object
+        Filled = true;
+        UpdateOpacity();
+    }
+
+    public void UpdateOpacity()
+    {
+        if (Filled)
+        {
+            Sprite.color = new Color(Sprite.color.r, Sprite.color.g, Sprite.color.b, 1.0f);
+        }
+        else
+        {
+            Sprite.color = new Color(Sprite.color.r, Sprite.color.g, Sprite.color.b, 0.5f);
         }
     }
 }
