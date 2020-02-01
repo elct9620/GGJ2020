@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
+    public enum Types {Circle, Square, Triangle};
     public LevelData Level;
     public AudioSource MainSource;
     public AudioSource Source;
+    public Sprite CircleSprite;
+    public Sprite SquareSprite;
+    public Sprite TriangleSprite;
     public SpriteRenderer Sprite;
 
     public NoteData Note;
@@ -17,6 +21,7 @@ public class Slot : MonoBehaviour
     public bool Filled = false;
 
     private bool PlayEnd = false;
+    private Types _type;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +38,27 @@ public class Slot : MonoBehaviour
         Source.pitch = Mathf.Pow(1.05946f, AbsPitchOffset) * PitchDirection;
 
         UpdateOpacity();
+    }
+
+    public void SetType(Types type)
+    {
+        _type = type;
+        switch (type) {
+            case Types.Circle:
+            Sprite.sprite = CircleSprite;
+            break;
+            case Types.Square:
+            Sprite.sprite = SquareSprite;
+            break;
+            case Types.Triangle:
+            Sprite.sprite = TriangleSprite;
+            break;
+        }
+    }
+
+    public bool isType(Types type)
+    {
+        return _type == type;
     }
 
     bool CanPlay()
