@@ -24,7 +24,11 @@ public class MusicPlayer : MonoBehaviour
     public LevelData CurrentLevel;
     public float WaitSecounds = 1.0f;
 
+    public delegate void OnEndedEvent();
+    public event OnEndedEvent OnEnded;
+
     private List<Track> _Tracks;
+    private bool Ended = false;
     void Start()
     {
         _Tracks = new List<Track>();
@@ -36,6 +40,14 @@ public class MusicPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Source.time >= Clip.length && !Ended)
+        {
+            if (OnEnded != null)
+            {
+                Ended = true;
+                OnEnded.Invoke();
+            }
+        }
     }
 
     public void Replay()
@@ -46,6 +58,7 @@ public class MusicPlayer : MonoBehaviour
             Destroy(track.gameObject);
         }
 
+        Ended = false;
         CreateTracks();
         Source.time = 0;
         StartCoroutine(PlayMusic());
