@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelData : ScriptableObject
 {
     public string Name = "RepaTiti A";
+    public AudioClip Clip;
     public List<ScoreData> Scores;
     public float Speed = 2.0f;
 }

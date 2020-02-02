@@ -7,4 +7,6 @@ public class ScoreData : ScriptableObject
 {
     public List<NoteData> Notes;
     public AudioClip Clip;
+    public float PitchTransposeAdd = -60.0f;
+    public float PitchTransposeDivision = 12.0f;
 }

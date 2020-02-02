@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40a45f0c93244c41bd816323ca44f6d, type: 3}
+  m_Name: Score_3
+  m_EditorClassIdentifier: 
+  Notes:
+  - Time: 39.74667
+    Pitch: 70
+  - Time: 40.365757
+    Pitch: 63
+  - Time: 40.984844
+    Pitch: 75
+  - Time: 42.223022
+    Pitch: 70
+  - Time: 42.84211
+    Pitch: 65
+  - Time: 43.4612
+    Pitch: 67
+  - Time: 44.699375
+    Pitch: 70
+  - Time: 45.318466
+    Pitch: 63
+  - Time: 45.937553
+    Pitch: 75
+  - Time: 47.17573
+    Pitch: 77
+  - Time: 47.79482
+    Pitch: 75
+  - Time: 48.413906
+    Pitch: 75
+  - Time: 49.652084
+    Pitch: 82
+  - Time: 51.302986
+    Pitch: 84
+  - Time: 51.715714
+    Pitch: 86
+  - Time: 52.12844
+    Pitch: 87
+  - Time: 53.366615
+    Pitch: 80
+  - Time: 54.604794
+    Pitch: 79
+  - Time: 55.84297
+    Pitch: 80
+  - Time: 57.081146
+    Pitch: 87
+  - Time: 57.493874
+    Pitch: 94
+  - Time: 57.9066
+    Pitch: 92
+  - Time: 58.319324
+    Pitch: 91
+  - Time: 59.144775
+    Pitch: 89
+  - Time: 59.557503
+    Pitch: 87
+  - Time: 61.208405
+    Pitch: 84
+  - Time: 61.62113
+    Pitch: 86
+  - Time: 62.033855
+    Pitch: 82
+  - Time: 63.272034
+    Pitch: 80
+  - Time: 64.51021
+    Pitch: 79
+  - Time: 65.74839
+    Pitch: 80
+  - Time: 66.986565
+    Pitch: 87
+  - Time: 67.39929
+    Pitch: 89
+  - Time: 67.81202
+    Pitch: 86
+  - Time: 68.22474
+    Pitch: 87
+  - Time: 89.27375
+    Pitch: 70
+  - Time: 89.892845
+    Pitch: 63
+  - Time: 90.51193
+    Pitch: 75
+  - Time: 91.75011
+    Pitch: 70
+  - Time: 92.369194
+    Pitch: 65
+  - Time: 92.98828
+    Pitch: 67
+  - Time: 94.22646
+    Pitch: 70
+  - Time: 94.84555
+    Pitch: 63
+  - Time: 95.46464
+    Pitch: 75
+  - Time: 96.70281
+    Pitch: 77
+  - Time: 97.32191
+    Pitch: 75
+  - Time: 97.940994
+    Pitch: 75
+  Clip: {fileID: 8300000, guid: dc99e75a552111749bb2609106fcf311, type: 3}
+  PitchTransposeAdd: -60
+  PitchTransposeDivision: 12
