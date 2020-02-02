@@ -17,6 +17,7 @@ public class Track : MonoBehaviour
     public int PreferCombo = 10;
 
     public int Combo = 0;
+    public int ComboBonusScaler = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +90,11 @@ public class Track : MonoBehaviour
 
         Combo += 1;
         UpdateBottomAlpha();
+    }
+
+    void AddComboBonus()
+    {
+        Gameplay.score += Combo * ComboBonusScaler;
     }
 
     private void UpdateBottomAlpha()
