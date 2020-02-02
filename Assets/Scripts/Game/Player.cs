@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     public Animator Animator;
     public List<AudioClip> ShootingSounds;
     public AudioSource Source;
-    public ParticleSystem shootBurst;
     public GameObject NoteSelector;
 
     // public GameObject movingArea;
@@ -76,7 +75,6 @@ public class Player : MonoBehaviour
                     if (type != null)
                     {
                         SpawnNote(1, noteSpeed, (Slot.Types)type);
-                        shootBurst.Play();
                         if (OnThrow != null)
                             OnThrow.Invoke();
                     }
@@ -89,7 +87,6 @@ public class Player : MonoBehaviour
                     if (type != null)
                     {
                         SpawnNote(2, noteSpeed, (Slot.Types)type);
-                        shootBurst.Play();
                         if (OnThrow != null)
                             OnThrow.Invoke();
                     }
