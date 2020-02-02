@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Opening : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class Opening : MonoBehaviour
             Message.text += word;
             yield return new WaitForSeconds(typeSpeed);
         }
+
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("PlaySheet");
     }
 
     // Update is called once per frame
