@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     public delegate void OnThrowEvent();
     public event OnThrowEvent OnThrow;
 
+    private int hurted = 0;
+
     void Start()
     {
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
@@ -51,6 +53,15 @@ public class Player : MonoBehaviour
         {
             tryMove(vertical);
         }
+
+        if (hurted > 0)
+        {
+            hurted--;
+            if (hurted == 0)
+            {
+                gameObject.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            }
+        }
     }
     void DetectMove(ref int vertical)
     {
@@ -69,7 +80,7 @@ public class Player : MonoBehaviour
         switch (gameObject.name)
         {
             case ("Player1"):
-                if (Input.GetKeyDown(KeyCode.D))
+                if (Input.GetKeyDown(KeyCode.D) && hurted == 0)
                 {
                     Slot.Types? type = NoteSelector.GetComponent<NoteSelector>().useSelectedType();
                     if (type != null)
@@ -81,7 +92,7 @@ public class Player : MonoBehaviour
                 }
                 break;
             case ("Player2"):
-                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                if (Input.GetKeyDown(KeyCode.LeftArrow) && hurted == 0)
                 {
                     Slot.Types? type = NoteSelector.GetComponent<NoteSelector>().useSelectedType();
                     if (type != null)
@@ -108,6 +119,18 @@ public class Player : MonoBehaviour
         note.GetComponent<NoteMove>().SetType(type);
         GameObject noteShoot = Instantiate(note, transform.position + distanceNotePlayer, transform.rotation) as GameObject;
         return noteShoot;
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "SlotShoot" && (
+            (other.GetComponent<NoteMove>().player == 1 && gameObject.name == "Player2") ||
+            (other.GetComponent<NoteMove>().player == 2 && gameObject.name == "Player1")
+        ))
+        {
+            other.GetComponent<NoteMove>().startDisappear();
+            gameObject.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.6f);
+            hurted = 60;
+        }
     }
 
     void tryMove(int vertical)
