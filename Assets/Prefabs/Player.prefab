@@ -97,6 +97,9 @@ MonoBehaviour:
   CircleSprite: {fileID: 21300000, guid: aa3ca5f3b37e5d948a99d1a9f4c94bf4, type: 3}
   SquareSprite: {fileID: 21300000, guid: 841d340c05b6af84aa4f1f7c6dc7291a, type: 3}
   TriangleSprite: {fileID: 21300000, guid: f631c8befa0b15c4c819c26f654cdef9, type: 3}
+  RegainInteval: 15
+  RegainPower: 0.05
+  PowerConsumption: 0.15
 --- !u!1 &7794651925223406641
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +157,6 @@ MonoBehaviour:
   Animator: {fileID: -583650925294535518}
   ShootingSounds: []
   Source: {fileID: 0}
-  shootBurst: {fileID: 2506551966293922207}
   NoteSelector: {fileID: 116277854}
 --- !u!50 &7794651925223406642
 Rigidbody2D:
@@ -441,12 +443,6 @@ PrefabInstance:
 --- !u!4 &8844127932575994946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4675333971603589825, guid: d03ae45f1fe39064997771f13d456adf,
-    type: 3}
-  m_PrefabInstance: {fileID: 4206001442197266051}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &2506551966293922207 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1772087002195513116, guid: d03ae45f1fe39064997771f13d456adf,
     type: 3}
   m_PrefabInstance: {fileID: 4206001442197266051}
   m_PrefabAsset: {fileID: 0}

@@ -7,6 +7,11 @@ public class NoteSelector : MonoBehaviour
     public Sprite CircleSprite;
     public Sprite SquareSprite;
     public Sprite TriangleSprite;
+
+    public int RegainInteval = 15;
+    public float RegainPower = 0.05f;
+
+    public float PowerConsumption = 0.15f;
     
     private float circlePower = 0.0f;
     private float squarePower = 0.0f;
@@ -28,18 +33,18 @@ public class NoteSelector : MonoBehaviour
             regainCountDown--;
         } else {
             if (circlePower <= 1.0f) {
-                circlePower += 0.01f;
+                circlePower = Mathf.Min(1.0f, circlePower + RegainPower);
                 changed = true;
             }
             if (squarePower <= 1.0f) {
-                squarePower += 0.01f;
+                squarePower = Mathf.Min(1.0f, squarePower + RegainPower);
                 changed = true;
             }
             if (trianglePower <= 1.0f) {
-                trianglePower += 0.01f;
+                trianglePower = Mathf.Min(1.0f, trianglePower + RegainPower);
                 changed = true;
             }
-            regainCountDown = 15;
+            regainCountDown = RegainInteval;
         }
 
         detectChange();
@@ -64,16 +69,16 @@ public class NoteSelector : MonoBehaviour
     {
         switch(selected) {
             case Slot.Types.Circle:
-                if (circlePower <= 0.2f) { return null; }
-                circlePower -= 0.2f;
+                if (circlePower <= PowerConsumption) { return null; }
+                circlePower -= PowerConsumption;
             break;
             case Slot.Types.Square:
-                if (squarePower <= 0.2f) { return null; }
-                squarePower -= 0.2f;
+                if (squarePower <= PowerConsumption) { return null; }
+                squarePower -= PowerConsumption;
             break;
             case Slot.Types.Triangle:
-                 if (trianglePower <= 0.2f) { return null; }
-                trianglePower -= 0.2f;
+                 if (trianglePower <= PowerConsumption) { return null; }
+                trianglePower -= PowerConsumption;
             break;
         }
         changed = true;
@@ -83,7 +88,7 @@ public class NoteSelector : MonoBehaviour
     void detectChange()
     {
         if (
-            (gameObject.transform.parent.name == "Player1" && Input.GetKeyDown(KeyCode.A)) ||
+            (Input.GetKeyDown(KeyCode.A) && gameObject.transform.parent.name == "Player1") ||
             (gameObject.transform.parent.name == "Player2" && Input.GetKeyDown(KeyCode.RightArrow))
         ) {
             switch(selected) {
