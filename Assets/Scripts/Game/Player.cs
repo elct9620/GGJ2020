@@ -107,7 +107,6 @@ public class Player : MonoBehaviour
         note.GetComponent<NoteMove>().speed = speed;
         note.GetComponent<NoteMove>().SetType(type);
         GameObject noteShoot = Instantiate(note, transform.position + distanceNotePlayer, transform.rotation) as GameObject;
-        Destroy(noteShoot, 0.9f);
         return noteShoot;
     }
 
