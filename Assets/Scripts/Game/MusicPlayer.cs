@@ -54,9 +54,10 @@ public class MusicPlayer : MonoBehaviour
     {
         foreach (Track track in _Tracks)
         {
-            _Tracks.Remove(track);
             Destroy(track.gameObject);
         }
+
+        _Tracks.Clear();
 
         Ended = false;
         CreateTracks();
