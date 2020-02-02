@@ -32,8 +32,10 @@ public class Gameplay : MonoBehaviour
 
         Time.text = String.Format("{0}:{1}", minutes.PadLeft(2, '0'), seconds.PadLeft(2, '0'));
         if (minutes == "0" && seconds == "0")
+        {
             ResultPanel.SetActive(true);
             ResultPanel.GetComponent<Animator>().Play("Popup");
+        }
     }
     public static void UpdateScore()
     {
