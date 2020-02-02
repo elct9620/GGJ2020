@@ -4809,13 +4809,14 @@ MonoBehaviour:
   TriangleSprite: {fileID: 21300000, guid: f631c8befa0b15c4c819c26f654cdef9, type: 3}
   Sprite: {fileID: -4787412706791907616}
   ScoreText: {fileID: 0}
+  track: {fileID: 0}
   Note:
     Time: 0
     Pitch: 0
   BeatOffset: 1
   yOffset: 0
   TrackEnd: 0
-  Filled: 1
+  Filled: 0
   Type: 0
   Effect: {fileID: 4786967978385184340}
 --- !u!212 &-4787412706791907616
