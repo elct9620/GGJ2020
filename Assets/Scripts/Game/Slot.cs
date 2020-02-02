@@ -6,8 +6,10 @@ public class Slot : MonoBehaviour
 {
     public enum Types { Circle, Square, Triangle };
     public LevelData Level;
+    public List<AudioClip> FilledSounds;
     public AudioSource MainSource;
     public AudioSource Source;
+    public AudioSource FilledSource;
     public Sprite CircleSprite;
     public Sprite SquareSprite;
     public Sprite TriangleSprite;
@@ -146,6 +148,8 @@ public class Slot : MonoBehaviour
                 UpdateOpacity();
                 Gameplay.UpdateScore();
                 Effect.Emit(1);
+                FilledSource.clip = FilledSounds[Mathf.FloorToInt(FilledSounds.Count * Random.value)];
+                FilledSource.Play();
                 Destroy(other.gameObject);
             }
         }
