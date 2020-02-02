@@ -14,6 +14,8 @@ public class Gameplay : MonoBehaviour
     public GameObject ResultPanel;
     public GameObject Player1;
     public GameObject Player2;
+    public ParticleSystem playingParticle;
+    public ParticleSystem resultParticle;
     public static int score;
     // public static int musicIndex;
     // Start is called before the first frame update
@@ -34,16 +36,21 @@ public class Gameplay : MonoBehaviour
 
         Time.text = String.Format("{0}:{1}", minutes.PadLeft(2, '0'), seconds.PadLeft(2, '0'));
         if (minutes == "0" && seconds == "0")
-        {
-            ResultPanel.SetActive(true);
-            ResultPanel.GetComponent<Animator>().SetBool("PopUp", true);
-            finalScore.GetComponent<Text>().text = Gameplay.scoreText.text;
-        }
+            onEndGame();
     }
     public static void UpdateScore()
     {
         score += 10;
         scoreText.text = "Score : " + score.ToString();
+    }
+    private void onEndGame()
+    {
+        playingParticle.gameObject.SetActive(false);
+        resultParticle.gameObject.SetActive(true);
+
+        ResultPanel.SetActive(true);
+        ResultPanel.GetComponent<Animator>().SetBool("PopUp", true);
+        finalScore.GetComponent<Text>().text = Gameplay.scoreText.text;
     }
     public void RestartGame()
     {
@@ -53,6 +60,8 @@ public class Gameplay : MonoBehaviour
         //ResultPanel.SetActive(false);
         Player1.transform.localPosition = new Vector3 (-4, 0, 0);
         Player2.transform.localPosition = new Vector3 (4, 0, 0);
+        playingParticle.gameObject.SetActive(true);
+        resultParticle.gameObject.SetActive(false);
     }
     public void BackToMenu()
     {
