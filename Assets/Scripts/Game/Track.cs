@@ -91,6 +91,7 @@ public class Track : MonoBehaviour
 
         Combo += 1;
         UpdateBottomAlpha();
+        AddComboBonus();
     }
 
     void AddComboBonus()
