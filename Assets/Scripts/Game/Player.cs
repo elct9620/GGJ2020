@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public List<AudioClip> ShootingSounds;
     public AudioSource Source;
     public GameObject NoteSelector;
+    public int hurtedDuration = 60;
 
     // public GameObject movingArea;
     private BoxCollider2D boxCollider;         //The BoxCollider2D component attached to this object.
@@ -128,8 +129,8 @@ public class Player : MonoBehaviour
         ))
         {
             other.GetComponent<NoteMove>().startDisappear();
-            gameObject.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.6f);
-            hurted = 60;
+            gameObject.GetComponent<Renderer>().material.color = new Color(1.0f, 0.6f, 0.6f, 0.9f);
+            hurted = hurtedDuration;
         }
     }
 
