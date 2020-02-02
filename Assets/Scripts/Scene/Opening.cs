@@ -8,6 +8,7 @@ public class Opening : MonoBehaviour
 {
     public Text Message;
     public float typeSpeed = 0.2f;
+    public AudioSource typingEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,11 @@ public class Opening : MonoBehaviour
         char[] characters = Message.text.ToCharArray();
         Message.text = "";
         yield return new WaitForSeconds(0.5f);
-
+        typingEffect.Play();
         foreach (char word in characters)
         {
             Message.text += word;
+            
             yield return new WaitForSeconds(typeSpeed);
         }
 
