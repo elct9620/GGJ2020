@@ -24,6 +24,7 @@ public class Slot : MonoBehaviour
 
     private bool PlayEnd = false;
     public Types Type;
+    public ParticleSystem Effect;
 
     public delegate void OnExitEvent(bool IsFilled);
     public event OnExitEvent OnExit;
@@ -141,6 +142,7 @@ public class Slot : MonoBehaviour
                 Filled = true;
                 UpdateOpacity();
                 Gameplay.UpdateScore();
+                Effect.Emit(1);
                 Destroy(other.gameObject);
             }
         }
