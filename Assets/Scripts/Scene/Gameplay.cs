@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Gameplay : MonoBehaviour
 {
     public static Text scoreText;
+    public Text finalScore;
     public Text Time;
     public Text Name;
     public GameObject GO;
@@ -14,6 +15,7 @@ public class Gameplay : MonoBehaviour
     public GameObject Player1;
     public GameObject Player2;
     public static int score;
+    // public static int musicIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,19 +36,21 @@ public class Gameplay : MonoBehaviour
         if (minutes == "0" && seconds == "0")
         {
             ResultPanel.SetActive(true);
-            ResultPanel.GetComponent<Animator>().Play("Popup");
+            ResultPanel.GetComponent<Animator>().SetBool("PopUp", true);
+            finalScore.GetComponent<Text>().text = Gameplay.scoreText.text;
         }
     }
     public static void UpdateScore()
     {
-        Gameplay.score += 10;
-        Gameplay.scoreText.text = "Score : " + Gameplay.score.ToString();
+        score += 10;
+        scoreText.text = "Score : " + score.ToString();
     }
     public void RestartGame()
     {
         // 重新開始
+        ResultPanel.GetComponent<Animator>().SetBool("PopUp", false);
         MusicPlayer.main.Replay();
-        ResultPanel.SetActive(false);
+        //ResultPanel.SetActive(false);
         Player1.transform.localPosition = new Vector3 (-4, 0, 0);
         Player2.transform.localPosition = new Vector3 (4, 0, 0);
     }
