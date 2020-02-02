@@ -55,6 +55,7 @@ public class Track : MonoBehaviour
             }
 
             Slot slot = Instantiate(SlotPrefab, Slots.transform);
+            slot.track = this;
             slot.Note = note;
             if (note.Pitch > trianglePitch)
             {

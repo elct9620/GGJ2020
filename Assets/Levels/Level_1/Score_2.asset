@@ -13,204 +13,254 @@ MonoBehaviour:
   m_Name: Score_2
   m_EditorClassIdentifier: 
   Notes:
-  - Time: 19.810835
-    Pitch: 82
-  - Time: 20.429922
+  - Time: 6.3158855
     Pitch: 75
-  - Time: 20.842648
-    Pitch: 87
-  - Time: 21.049011
-    Pitch: 87
-  - Time: 21.461737
-    Pitch: 86
-  - Time: 21.874462
-    Pitch: 84
-  - Time: 22.287188
+  - Time: 7.554063
     Pitch: 82
-  - Time: 22.906277
+  - Time: 8.173151
     Pitch: 77
-  - Time: 23.319002
-    Pitch: 80
-  - Time: 23.525366
+  - Time: 8.79224
     Pitch: 79
-  - Time: 23.938091
-    Pitch: 77
-  - Time: 24.350817
-    Pitch: 75
-  - Time: 24.55718
-    Pitch: 77
-  - Time: 24.763542
+  - Time: 10.030417
     Pitch: 82
-  - Time: 25.382631
+  - Time: 11.268594
+    Pitch: 82
+  - Time: 11.68132
+    Pitch: 80
+  - Time: 12.094046
+    Pitch: 79
+  - Time: 12.506771
+    Pitch: 77
+  - Time: 13.744948
+    Pitch: 79
+  - Time: 14.983126
     Pitch: 75
-  - Time: 25.795357
-    Pitch: 87
-  - Time: 26.00172
-    Pitch: 87
-  - Time: 26.414446
+  - Time: 16.221302
+    Pitch: 75
+  - Time: 16.634027
+    Pitch: 77
+  - Time: 17.046755
+    Pitch: 79
+  - Time: 17.45948
+    Pitch: 77
+  - Time: 18.697657
+    Pitch: 79
+  - Time: 23.650366
+    Pitch: 79
+  - Time: 24.888542
+    Pitch: 75
+  - Time: 25.507631
+    Pitch: 75
+  - Time: 26.12672
+    Pitch: 75
+  - Time: 27.364897
+    Pitch: 82
+  - Time: 27.983986
+    Pitch: 77
+  - Time: 28.603073
+    Pitch: 79
+  - Time: 29.841251
+    Pitch: 82
+  - Time: 30.46034
+    Pitch: 82
+  - Time: 31.079428
+    Pitch: 82
+  - Time: 32.317604
+    Pitch: 77
+  - Time: 32.936695
+    Pitch: 77
+  - Time: 33.555782
+    Pitch: 79
+  - Time: 34.79396
+    Pitch: 75
+  - Time: 35.413048
+    Pitch: 75
+  - Time: 36.032135
+    Pitch: 75
+  - Time: 37.270313
+    Pitch: 77
+  - Time: 37.889404
+    Pitch: 77
+  - Time: 38.50849
+    Pitch: 79
+  - Time: 38.921215
+    Pitch: 77
+  - Time: 39.333942
+    Pitch: 75
+  - Time: 43.048473
+    Pitch: 77
+  - Time: 43.4612
+    Pitch: 79
+  - Time: 44.699375
+    Pitch: 75
+  - Time: 45.937553
+    Pitch: 75
+  - Time: 46.35028
+    Pitch: 77
+  - Time: 46.763004
+    Pitch: 79
+  - Time: 47.17573
+    Pitch: 77
+  - Time: 47.79482
+    Pitch: 77
+  - Time: 48.413906
+    Pitch: 75
+  - Time: 49.652084
+    Pitch: 79
+  - Time: 50.06481
+    Pitch: 79
+  - Time: 50.477535
+    Pitch: 79
+  - Time: 50.890263
+    Pitch: 82
+  - Time: 52.12844
+    Pitch: 79
+  - Time: 52.541164
+    Pitch: 79
+  - Time: 52.95389
+    Pitch: 79
+  - Time: 53.366615
     Pitch: 86
-  - Time: 26.827171
-    Pitch: 87
-  - Time: 27.239897
-    Pitch: 89
-  - Time: 27.858986
+  - Time: 54.604794
+    Pitch: 79
+  - Time: 55.01752
+    Pitch: 79
+  - Time: 55.430244
+    Pitch: 79
+  - Time: 55.84297
     Pitch: 82
-  - Time: 28.271711
-    Pitch: 92
-  - Time: 28.478073
+  - Time: 57.081146
+    Pitch: 82
+  - Time: 57.493874
+    Pitch: 82
+  - Time: 57.9066
+    Pitch: 82
+  - Time: 58.319324
+    Pitch: 86
+  - Time: 59.557503
+    Pitch: 79
+  - Time: 59.970226
+    Pitch: 79
+  - Time: 60.382954
+    Pitch: 79
+  - Time: 60.79568
+    Pitch: 82
+  - Time: 62.033855
+    Pitch: 79
+  - Time: 62.446583
+    Pitch: 79
+  - Time: 62.859306
+    Pitch: 79
+  - Time: 63.272034
+    Pitch: 86
+  - Time: 64.51021
+    Pitch: 79
+  - Time: 64.922935
+    Pitch: 79
+  - Time: 65.33566
+    Pitch: 79
+  - Time: 65.74839
+    Pitch: 82
+  - Time: 66.986565
+    Pitch: 82
+  - Time: 67.39929
+    Pitch: 82
+  - Time: 67.81202
+    Pitch: 82
+  - Time: 68.22474
+    Pitch: 79
+  - Time: 73.17745
+    Pitch: 79
+  - Time: 74.41563
+    Pitch: 75
+  - Time: 75.03471
+    Pitch: 75
+  - Time: 75.65381
+    Pitch: 75
+  - Time: 76.89198
+    Pitch: 82
+  - Time: 77.51107
+    Pitch: 77
+  - Time: 78.13016
+    Pitch: 79
+  - Time: 79.36834
+    Pitch: 82
+  - Time: 79.98743
+    Pitch: 82
+  - Time: 80.606514
+    Pitch: 82
+  - Time: 81.84469
+    Pitch: 77
+  - Time: 82.463776
+    Pitch: 77
+  - Time: 83.08287
+    Pitch: 79
+  - Time: 84.321045
+    Pitch: 75
+  - Time: 84.94013
+    Pitch: 75
+  - Time: 85.55922
+    Pitch: 75
+  - Time: 86.7974
+    Pitch: 77
+  - Time: 87.41649
+    Pitch: 77
+  - Time: 88.035576
+    Pitch: 79
+  - Time: 88.4483
+    Pitch: 77
+  - Time: 88.86103
+    Pitch: 75
+  - Time: 92.57556
+    Pitch: 77
+  - Time: 92.98828
+    Pitch: 79
+  - Time: 94.22646
+    Pitch: 75
+  - Time: 95.46464
+    Pitch: 75
+  - Time: 95.877365
+    Pitch: 77
+  - Time: 96.29009
+    Pitch: 79
+  - Time: 96.70281
+    Pitch: 77
+  - Time: 97.32191
+    Pitch: 77
+  - Time: 97.940994
+    Pitch: 75
+  - Time: 99.17917
+    Pitch: 87
+  - Time: 100.00462
+    Pitch: 87
+  - Time: 100.41735
     Pitch: 91
-  - Time: 28.8908
-    Pitch: 89
-  - Time: 29.303526
+  - Time: 101.2428
     Pitch: 87
-  - Time: 29.716251
-    Pitch: 82
-  - Time: 30.33534
-    Pitch: 75
-  - Time: 30.748066
+  - Time: 101.655525
     Pitch: 87
-  - Time: 30.954428
+  - Time: 102.48097
     Pitch: 87
-  - Time: 31.367153
+  - Time: 102.8937
+    Pitch: 94
+  - Time: 103.719154
+    Pitch: 91
+  - Time: 104.13188
+    Pitch: 87
+  - Time: 104.95733
+    Pitch: 87
+  - Time: 105.370056
+    Pitch: 91
+  - Time: 106.19551
+    Pitch: 87
+  - Time: 106.60823
+    Pitch: 87
+  - Time: 107.02096
     Pitch: 86
-  - Time: 31.77988
-    Pitch: 84
-  - Time: 32.192604
-    Pitch: 82
-  - Time: 32.811695
-    Pitch: 77
-  - Time: 33.22442
-    Pitch: 80
-  - Time: 33.430782
-    Pitch: 79
-  - Time: 33.84351
-    Pitch: 77
-  - Time: 34.256233
-    Pitch: 75
-  - Time: 34.462597
-    Pitch: 77
-  - Time: 34.66896
-    Pitch: 82
-  - Time: 35.288048
-    Pitch: 75
-  - Time: 35.700775
+  - Time: 107.433685
     Pitch: 87
-  - Time: 35.907135
+  - Time: 107.84641
     Pitch: 87
-  - Time: 36.319862
-    Pitch: 86
-  - Time: 36.73259
-    Pitch: 87
-  - Time: 37.145313
-    Pitch: 89
-  - Time: 37.764404
-    Pitch: 87
-  - Time: 38.177128
-    Pitch: 86
-  - Time: 38.38349
-    Pitch: 87
-  - Time: 39.62167
-    Pitch: 70
-  - Time: 40.240757
-    Pitch: 63
-  - Time: 40.65348
-    Pitch: 75
-  - Time: 40.859844
-    Pitch: 75
-  - Time: 41.27257
-    Pitch: 74
-  - Time: 41.685295
-    Pitch: 72
-  - Time: 42.098022
-    Pitch: 70
-  - Time: 42.71711
-    Pitch: 65
-  - Time: 43.129837
-    Pitch: 68
-  - Time: 43.3362
-    Pitch: 67
-  - Time: 43.748924
-    Pitch: 65
-  - Time: 44.16165
-    Pitch: 63
-  - Time: 44.368015
-    Pitch: 65
-  - Time: 44.574375
-    Pitch: 70
-  - Time: 45.193466
-    Pitch: 63
-  - Time: 45.60619
-    Pitch: 75
-  - Time: 45.812553
-    Pitch: 75
-  - Time: 46.22528
-    Pitch: 74
-  - Time: 46.638004
-    Pitch: 75
-  - Time: 47.05073
-    Pitch: 77
-  - Time: 47.66982
-    Pitch: 75
-  - Time: 48.082546
-    Pitch: 74
-  - Time: 48.288906
-    Pitch: 75
-  - Time: 49.527084
-    Pitch: 75
-  - Time: 49.93981
-    Pitch: 74
-  - Time: 50.352535
-    Pitch: 75
-  - Time: 50.5589
-    Pitch: 77
-  - Time: 50.765263
-    Pitch: 79
-  - Time: 51.177986
-    Pitch: 77
-  - Time: 51.590714
-    Pitch: 75
-  - Time: 51.797077
-    Pitch: 74
-  - Time: 52.00344
-    Pitch: 75
-  - Time: 52.416164
-    Pitch: 74
-  - Time: 52.82889
-    Pitch: 75
-  - Time: 53.035255
-    Pitch: 77
-  - Time: 53.241615
-    Pitch: 82
-  - Time: 53.654343
-    Pitch: 80
-  - Time: 54.067066
-    Pitch: 79
-  - Time: 54.27343
-    Pitch: 77
-  - Time: 54.479794
-    Pitch: 75
-  - Time: 54.89252
-    Pitch: 74
-  - Time: 55.305244
-    Pitch: 75
-  - Time: 55.51161
-    Pitch: 77
-  - Time: 55.71797
-    Pitch: 79
-  - Time: 56.130695
-    Pitch: 77
-  - Time: 56.543423
-    Pitch: 75
-  - Time: 56.749786
-    Pitch: 74
-  - Time: 56.956146
-    Pitch: 75
-  - Time: 57.368874
-    Pitch: 74
-  - Time: 57.7816
-    Pitch: 75
-  - Time: 57.98796
-    Pitch: 77
-  - Time: 58.194324
-    Pitch: 75
-  Clip: {fileID: 8300000, guid: 1316f987bc6104dcd87346a0778fb0fe, type: 3}
+  Clip: {fileID: 8300000, guid: 6a0183db5e2ea634fa25b862aa6de7b2, type: 3}
+  PitchTransposeAdd: -60
+  PitchTransposeDivision: 12

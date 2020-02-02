@@ -20,7 +20,6 @@ public class MusicPlayer : MonoBehaviour
     }
     public Track TrackPrefab;
     public AudioSource Source;
-    public AudioClip Clip;
     public LevelData CurrentLevel;
     public float WaitSecounds = 1.0f;
 
@@ -40,7 +39,7 @@ public class MusicPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Source.time >= Clip.length && !Ended)
+        if (Source.time >= CurrentLevel.Clip.length && !Ended)
         {
             if (OnEnded != null)
             {
@@ -67,7 +66,7 @@ public class MusicPlayer : MonoBehaviour
 
     public IEnumerator PlayMusic()
     {
-        Source.clip = Clip;
+        Source.clip = CurrentLevel.Clip;
         yield return new WaitForSeconds(WaitSecounds);
         Source.Play();
     }

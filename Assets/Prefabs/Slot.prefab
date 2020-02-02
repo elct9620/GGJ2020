@@ -4815,7 +4815,7 @@ MonoBehaviour:
   BeatOffset: 1
   yOffset: 0
   TrackEnd: 0
-  Filled: 0
+  Filled: 1
   Type: 0
   Effect: {fileID: 4786967978385184340}
 --- !u!212 &-4787412706791907616

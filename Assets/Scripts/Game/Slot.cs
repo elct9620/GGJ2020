@@ -15,6 +15,8 @@ public class Slot : MonoBehaviour
 
     public GameObject ScoreText;
 
+    public Track track;
+
     public NoteData Note;
     // Collider Height
     public float BeatOffset = 1.0f;
@@ -53,9 +55,10 @@ public class Slot : MonoBehaviour
         */
 
         // https://stackoverflow.com/questions/36793628/frequency-and-pitch-relation-for-audioclip-unity3d
-        float transpose = -4;
-        float note = Note.Pitch - 56f; // Magic number for our midi
-        Source.pitch = Mathf.Pow(2, (note + transpose) / 12.0f);
+        // float transpose = -4;
+        // float note = Note.Pitch - 56f; // Magic number for our midi
+        // Source.pitch = Mathf.Pow(2, (note + transpose) / 12.0f);
+        Source.pitch = Mathf.Pow(2, (Note.Pitch + track.Score.PitchTransposeAdd) / track.Score.PitchTransposeDivision);
 
         // Source.pitch = Mathf.Pow(1.05946f, AbsPitchOffset) * PitchDirection;
 

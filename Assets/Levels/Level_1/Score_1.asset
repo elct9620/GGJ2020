@@ -13,86 +13,102 @@ MonoBehaviour:
   m_Name: Score_1
   m_EditorClassIdentifier: 
   Notes:
-  - Time: 9.905417
-    Pitch: 58
-  - Time: 11.143594
-    Pitch: 56
-  - Time: 12.381771
-    Pitch: 53
-  - Time: 13.619948
-    Pitch: 55
-  - Time: 14.858126
-    Pitch: 51
-  - Time: 16.096302
-    Pitch: 55
-  - Time: 17.33448
-    Pitch: 53
-  - Time: 18.572657
-    Pitch: 51
-  - Time: 19.810835
-    Pitch: 58
-  - Time: 21.049011
-    Pitch: 56
-  - Time: 22.287188
-    Pitch: 53
-  - Time: 23.525366
-    Pitch: 55
-  - Time: 24.763542
-    Pitch: 51
-  - Time: 26.00172
-    Pitch: 55
-  - Time: 27.239897
-    Pitch: 53
-  - Time: 28.478073
-    Pitch: 55
-  - Time: 29.716251
-    Pitch: 58
-  - Time: 30.954428
-    Pitch: 56
-  - Time: 32.192604
-    Pitch: 53
-  - Time: 33.430782
-    Pitch: 55
-  - Time: 34.66896
-    Pitch: 51
-  - Time: 35.907135
-    Pitch: 55
-  - Time: 37.145313
-    Pitch: 53
-  - Time: 38.38349
-    Pitch: 51
-  - Time: 39.62167
-    Pitch: 58
-  - Time: 40.859844
-    Pitch: 56
-  - Time: 42.098022
-    Pitch: 53
-  - Time: 43.3362
-    Pitch: 55
-  - Time: 44.574375
-    Pitch: 51
-  - Time: 45.812553
-    Pitch: 55
-  - Time: 47.05073
-    Pitch: 53
-  - Time: 48.288906
-    Pitch: 51
-  - Time: 49.527084
-    Pitch: 46
-  - Time: 50.765263
-    Pitch: 44
-  - Time: 52.00344
-    Pitch: 43
-  - Time: 53.241615
-    Pitch: 39
-  - Time: 54.479794
-    Pitch: 41
-  - Time: 55.71797
-    Pitch: 43
-  - Time: 56.33706
-    Pitch: 44
-  - Time: 56.956146
-    Pitch: 46
-  - Time: 58.194324
-    Pitch: 39
-  Clip: {fileID: 8300000, guid: 085b91b396a0a44188d7a7e776586ad6, type: 3}
+  - Time: 19.935835
+    Pitch: 82
+  - Time: 21.174011
+    Pitch: 87
+  - Time: 21.586737
+    Pitch: 86
+  - Time: 21.999462
+    Pitch: 84
+  - Time: 22.412188
+    Pitch: 82
+  - Time: 23.650366
+    Pitch: 79
+  - Time: 24.888542
+    Pitch: 82
+  - Time: 26.12672
+    Pitch: 87
+  - Time: 26.539446
+    Pitch: 86
+  - Time: 26.952171
+    Pitch: 87
+  - Time: 27.364897
+    Pitch: 89
+  - Time: 28.603073
+    Pitch: 91
+  - Time: 29.841251
+    Pitch: 82
+  - Time: 31.079428
+    Pitch: 87
+  - Time: 31.492153
+    Pitch: 86
+  - Time: 31.90488
+    Pitch: 84
+  - Time: 32.317604
+    Pitch: 82
+  - Time: 33.555782
+    Pitch: 79
+  - Time: 34.79396
+    Pitch: 82
+  - Time: 36.032135
+    Pitch: 87
+  - Time: 36.444862
+    Pitch: 86
+  - Time: 36.85759
+    Pitch: 87
+  - Time: 37.270313
+    Pitch: 89
+  - Time: 38.50849
+    Pitch: 87
+  - Time: 69.46292
+    Pitch: 82
+  - Time: 70.701096
+    Pitch: 87
+  - Time: 71.11382
+    Pitch: 86
+  - Time: 71.52655
+    Pitch: 84
+  - Time: 71.93927
+    Pitch: 82
+  - Time: 73.17745
+    Pitch: 79
+  - Time: 74.41563
+    Pitch: 82
+  - Time: 75.65381
+    Pitch: 87
+  - Time: 76.06653
+    Pitch: 86
+  - Time: 76.479256
+    Pitch: 87
+  - Time: 76.89198
+    Pitch: 89
+  - Time: 78.13016
+    Pitch: 91
+  - Time: 79.36834
+    Pitch: 82
+  - Time: 80.606514
+    Pitch: 87
+  - Time: 81.01924
+    Pitch: 86
+  - Time: 81.43196
+    Pitch: 84
+  - Time: 81.84469
+    Pitch: 82
+  - Time: 83.08287
+    Pitch: 79
+  - Time: 84.321045
+    Pitch: 82
+  - Time: 85.55922
+    Pitch: 87
+  - Time: 85.97195
+    Pitch: 86
+  - Time: 86.384674
+    Pitch: 87
+  - Time: 86.7974
+    Pitch: 89
+  - Time: 88.035576
+    Pitch: 87
+  Clip: {fileID: 8300000, guid: 55df4d6f2a3a05e44b2f572935b37b49, type: 3}
+  PitchTransposeAdd: -60
+  PitchTransposeDivision: 12
