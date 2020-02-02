@@ -191,6 +191,7 @@ MonoBehaviour:
   BottomFire: {fileID: 2637170212778635305}
   PreferCombo: 10
   Combo: 0
+  ComboBonusScaler: 10
 --- !u!212 &8733330043527212690
 SpriteRenderer:
   m_ObjectHideFlags: 0

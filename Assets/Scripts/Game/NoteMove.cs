@@ -6,8 +6,6 @@ public class NoteMove : MonoBehaviour
 {
     public int player;
     public float speed;
-    public float disappearAfterSeconds = 0.4f;
-
     public Sprite CircleSprite;
     public Sprite SquareSprite;
     public Sprite TriangleSprite;
@@ -21,7 +19,6 @@ public class NoteMove : MonoBehaviour
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        StartCoroutine(disappearing());
     }
 
     public void SetType(Slot.Types type)
@@ -56,9 +53,14 @@ public class NoteMove : MonoBehaviour
             transform.Translate(new Vector2(-1 * speed, 0) * Time.deltaTime);
     }
 
+    public void startDisappear()
+    {
+        speed = 0.0f;
+        StartCoroutine(disappearing());
+    }
+
     public IEnumerator disappearing()
     {
-        yield return new WaitForSeconds(disappearAfterSeconds);
         float alpha = 1.0f;
         while(alpha >= 0.0f) {
             alpha -= 0.1f;
