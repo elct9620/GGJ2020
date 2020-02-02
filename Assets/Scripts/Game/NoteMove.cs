@@ -6,6 +6,7 @@ public class NoteMove : MonoBehaviour
 {
     public int player;
     public float speed;
+    public float disappearAfterSeconds = 0.4f;
 
     public Sprite CircleSprite;
     public Sprite SquareSprite;
@@ -20,6 +21,7 @@ public class NoteMove : MonoBehaviour
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        StartCoroutine(disappearing());
     }
 
     public void SetType(Slot.Types type)
@@ -52,6 +54,18 @@ public class NoteMove : MonoBehaviour
         }
         else if (player == 2)
             transform.Translate(new Vector2(-1 * speed, 0) * Time.deltaTime);
+    }
+
+    public IEnumerator disappearing()
+    {
+        yield return new WaitForSeconds(disappearAfterSeconds);
+        float alpha = 1.0f;
+        while(alpha >= 0.0f) {
+            alpha -= 0.1f;
+            gameObject.GetComponent<Renderer>().material.color = new Color(1.0f, 1.0f, 1.0f, alpha);
+            yield return new WaitForSeconds(0.03f);
+        }
+        Destroy(gameObject);
     }
     
     /// <summary>
