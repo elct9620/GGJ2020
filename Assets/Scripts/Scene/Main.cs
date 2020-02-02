@@ -17,6 +17,6 @@ public class Main : MonoBehaviour
     }
     public void GoToPlayScene()
     {
-        SceneManager.LoadScene("PlaySheet");
+        SceneManager.LoadScene("Opening");
     }
 }
