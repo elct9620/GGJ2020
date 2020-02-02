@@ -158,6 +158,7 @@ MonoBehaviour:
   ShootingSounds: []
   Source: {fileID: 0}
   NoteSelector: {fileID: 116277854}
+  hurtedDuration: 60
 --- !u!50 &7794651925223406642
 Rigidbody2D:
   serializedVersion: 4
@@ -192,7 +193,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.039058477, y: -0.059310973}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -203,7 +204,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5168323, y: 0.6383475}
   m_EdgeRadius: 0
 --- !u!212 &7794651925223406640
 SpriteRenderer:
