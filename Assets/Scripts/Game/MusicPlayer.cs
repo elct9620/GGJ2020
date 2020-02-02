@@ -23,8 +23,16 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip Clip;
     public LevelData CurrentLevel;
     public float WaitSecounds = 1.0f;
+
+    public delegate void OnEndedEvent();
+    public event OnEndedEvent OnEnded;
+
+    private List<Track> _Tracks;
+    private bool Ended = false;
     void Start()
     {
+        _Tracks = new List<Track>();
+
         CreateTracks();
         StartCoroutine(PlayMusic());
     }
@@ -32,6 +40,28 @@ public class MusicPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Source.time >= Clip.length && !Ended)
+        {
+            if (OnEnded != null)
+            {
+                Ended = true;
+                OnEnded.Invoke();
+            }
+        }
+    }
+
+    public void Replay()
+    {
+        foreach (Track track in _Tracks)
+        {
+            _Tracks.Remove(track);
+            Destroy(track.gameObject);
+        }
+
+        Ended = false;
+        CreateTracks();
+        Source.time = 0;
+        StartCoroutine(PlayMusic());
     }
 
     public IEnumerator PlayMusic()
@@ -52,6 +82,7 @@ public class MusicPlayer : MonoBehaviour
             float x = startX + index + 0.5f;
             Track track = Instantiate(TrackPrefab, new Vector3(x, 0, 0), Quaternion.identity, gameObject.transform);
             track.Score = score;
+            _Tracks.Add(track);
             index += 1;
         }
     }
